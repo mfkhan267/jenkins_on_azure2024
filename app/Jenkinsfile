@@ -10,17 +10,17 @@ pipeline {
     stages {
         stage('git checkout') {
             steps {
-              checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/mfkhan267/my_jenkins_app.git']]])
+              checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/mfkhan267/jenkins_on_azure2024.git']]])
               sh 'pwd'
               sh 'ls -ltr'
-              dir("${env.WORKSPACE}/container"){
+              dir("${env.WORKSPACE}/app"){
                     sh 'pwd'
                         }
                     }
                               }
         stage('build docker image'){
             steps{
-    	        dir("${env.WORKSPACE}/container"){
+    	        dir("${env.WORKSPACE}/app"){
                     sh 'pwd'
                     sh 'docker build --force-rm -t "$ACR_REGISTRY/$APP_REPO_NAME:$BUILD_NUMBER" .'
                     sh 'docker image ls'
