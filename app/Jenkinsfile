@@ -1,4 +1,3 @@
-// Jenkins On Azure 2024
 pipeline {
     agent any
     environment {
