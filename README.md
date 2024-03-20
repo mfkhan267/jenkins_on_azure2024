@@ -74,7 +74,7 @@ Run [az vm create](https://learn.microsoft.com/en-us/azure/virtual-machines/linu
     --public-ip-sku Standard \
     --custom-data cloud-init-jenkins.txt
 
-    OR (if you already have a ssh key pair that you would like to use) 
+OR (if you already have a ssh key pair that you would like to use) 
     
 // azurecli command
 
