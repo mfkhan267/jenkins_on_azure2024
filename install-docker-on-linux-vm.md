@@ -48,4 +48,4 @@ There you have it. You have successfully installed the docker engine. It is time
 
 ## Next steps
 
-[Coming Soon]
+[Part 3 - Coming Soon]
