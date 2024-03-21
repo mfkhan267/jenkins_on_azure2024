@@ -1,4 +1,4 @@
-# No Non-Sense Running Jenkins on an Azure Linux VM like a BOSS
+# NO non-sense Running Jenkins on an Azure Linux VM like a BOSS
 
 # Part 1
 
