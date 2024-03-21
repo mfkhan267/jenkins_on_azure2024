@@ -95,7 +95,9 @@ Run [az vm list](https://learn.microsoft.com/en-us/cli/azure/vm?view=azure-cli-l
 
     az vm list -d -o table --query "[?name=='jenkinsvm267']"
 
-As Jenkins runs on port 8080, let us now run [az vm open-port](https://learn.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest#az-vm-open-port) command to open port 8080 on the new virtual machine. You also need to open additional ports later on if your container app is listening on other ports like 8080, 3000 and so on.
+As Jenkins runs on port 8080, let us now run [az vm open-port](https://learn.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest#az-vm-open-port) command to open port 8080 on the new virtual machine. You also need to open additional ports later on if your container app is listening on other ports like 8080, 3000 and so on. 
+
+Note: The Jenkins port may be configured as per your business requirement and security policies with the 'sudo systemctl edit jenkins' command.
 
 // azurecli command
 
