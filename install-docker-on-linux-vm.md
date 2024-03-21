@@ -14,22 +14,15 @@ We shall use the scripted installation method for convenience.
     curl -fsSL https://get.docker.com -o get-docker.sh
     sudo sh get-docker.sh
 
-To run Docker with non-root privileges you will have to add your user to the docker group.
+Note: In case you get permission denied while trying to connect to the Docker daemon socket Error: /var/run/docker.sock: connect: permission denied
+Note: You will need add the jenkins user to the docker group. This will allow you to run Docker with non-root privileges
 
 // bash command
 
-    sudo usermod -aG docker $USER
     sudo usermod -aG docker jenkins
     sudo usermod -aG docker azureuser
-    sudo usermod -aG docker awsuser
 
-In case the Docker group does not exist create the Docker Group.
-
-// bash command
-
-    sudo groupadd docker
-
-Restart so that your group membership is re-evaluated.
+Restart the VM so that the group membership is re-evaluated.
 
 // bash command
 
