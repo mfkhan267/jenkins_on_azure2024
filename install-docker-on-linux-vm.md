@@ -1,4 +1,4 @@
-# No Non-Sense Installing Docker on an Azure Linux VM running Jenkins
+# NO non-sense Installing Docker on an Azure Linux VM running Jenkins
 
 # Part 2
 
