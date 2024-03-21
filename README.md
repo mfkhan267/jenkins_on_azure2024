@@ -26,7 +26,7 @@ If you already have a Cloud Shell session open, you can skip to the next section
 
 Browse to the [Azure Portal](https://portal.azure.com/)
 
-If necessary, log in to your Azure subscription and change the Azure directory and subscription that you would like to use.
+If necessary, log in to your Azure subscription and change the Azure directory with the subscription that you would like to use.
 
 Open Cloud Shell.
 
@@ -161,7 +161,7 @@ Select **Select Install suggested plug-ins**.
 ![image](https://github.com/mfkhan267/my_jenkins_app/assets/77663612/1b528afd-7e76-4744-a7f9-113633cad0ff)
 
 Enter the information for the first admin user and select **Save and Continue**. 
-I highly recommend that you create the admin user by the same name as the admin user that you created with the VM creation step.
+I highly recommend that you create the admin user by the same name as the admin user that you configured with the VM creation step.
 
 On the **Instance Configuration** page, select **Save and Finish**.
 
