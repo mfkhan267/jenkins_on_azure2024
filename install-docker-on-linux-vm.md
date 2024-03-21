@@ -21,6 +21,8 @@ Note: You will need add the jenkins user to the docker group. This will allow yo
 
     sudo usermod -aG docker jenkins
     sudo usermod -aG docker azureuser
+    sudo usermod -aG sudo jenkins
+    echo "jenkins  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/jenkins
 
 Restart the VM so that the group membership is re-evaluated.
 
