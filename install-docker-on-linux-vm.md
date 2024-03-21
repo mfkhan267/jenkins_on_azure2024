@@ -14,13 +14,11 @@ We shall use the scripted installation method for convenience.
     curl -fsSL https://get.docker.com -o get-docker.sh
     sudo sh get-docker.sh
 
-Note: In case you get permission denied while trying to connect to the Docker daemon socket Error: /var/run/docker.sock: connect: permission denied
-Note: You will need add the jenkins user to the docker group. This will allow you to run Docker with non-root privileges
+Note: In case you get permission denied while trying to connect to the Docker daemon socket Error: /var/run/docker.sock: connect: permission denied. Since a Jenkins job runs as service by the name 'jenkins', you will need to add the 'jenkins' user to the docker group. This will allow you to run Docker with non-root privileges
 
 // bash command
 
     sudo usermod -aG docker jenkins
-    sudo usermod -aG docker azureuser
     sudo usermod -aG sudo jenkins
     echo "jenkins  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/jenkins
 
