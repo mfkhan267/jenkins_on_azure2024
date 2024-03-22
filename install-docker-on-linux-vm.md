@@ -19,7 +19,6 @@ Note: In case you get permission denied while trying to connect to the Docker da
 // bash command
 
     sudo usermod -aG docker jenkins
-    sudo usermod -aG sudo jenkins
     echo "jenkins  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/jenkins
 
 Restart the VM so that the group membership is re-evaluated.
