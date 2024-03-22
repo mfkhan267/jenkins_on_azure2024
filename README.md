@@ -124,10 +124,6 @@ You may retieve the IP address from the Azure Portal Console and selecting the V
 
 ![image](https://github.com/mfkhan267/my_jenkins_app/assets/77663612/d1a43772-c1fd-4df4-be6a-43c63093551a)
 
-    **Key points**:
-
-    - The `--query` parameter limits the output to the public IP addresses for the virtual machine.
-
 Using the IP address retrieved in the previous step, SSH into the virtual machine. You'll need to confirm the connection request.
 
 // azurecli command
@@ -160,8 +156,12 @@ Select **Select Install suggested plug-ins**.
 
 ![image](https://github.com/mfkhan267/my_jenkins_app/assets/77663612/1b528afd-7e76-4744-a7f9-113633cad0ff)
 
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/0a2f8287-5f07-47db-92db-718126b0adfc)
+
 Enter the information for the first admin user and select **Save and Continue**. 
 I highly recommend that you create the admin user by the same name as the admin user that you configured with the VM creation step.
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/ca282eac-b2ee-435f-a0f3-52f8d5ede78a)
 
 On the **Instance Configuration** page, select **Save and Finish**.
 
