@@ -26,7 +26,13 @@ Prerequisites :
 # Project Task and Steps:
 1- Create a Azure Container Registry >>> <a href="https://github.com/hkaanturgut/DEPLOY-WEBAPPS-TO-AZURE-APP-SERVICE-USING-JENKINS/tree/main/terraspace%20codes/app/stacks/acr" target="_blank">ACR Terraspace Codes</a> 
 
-![Screenshot 2023-02-14 at 9 00 31 PM](https://user-images.githubusercontent.com/113396342/218908353-53eb631b-d4c0-4f92-96c8-e5663679417b.png)
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/15ac0618-7cdc-4696-ac77-e5dba48dd802)
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/886fcfe8-4a02-4b95-bc42-9ab71a9669a4)
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/09ceeac3-0834-4358-a0db-5d507a1820ef)
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/f12efb87-15ca-4590-b30d-5314ee2f7ef8)
 
 #
 
