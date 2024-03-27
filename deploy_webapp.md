@@ -10,13 +10,17 @@
 #
 
 # Let's get started!
-      
-      
-   APPS :
-- Tetris-Game-App
-- Apprun-realworld-example-app
-- Crizmas-mvc-realworld-example-app
-- React-redux-realworld-example-app
+
+To deploy a Java web app to Azure, you can use Azure CLI in a Jenkins Pipeline. In this tutorial, you do the following tasks:
+
+    Create a Jenkins VM
+    Configure Jenkins
+    Create an Azure container registry
+    Create a web app in Azure
+    Prepare your GitHub repository with the App Code
+    Create your Jenkins pipeline
+    Run the pipeline and verify the web app
+
 #
 
 Prerequisites :
