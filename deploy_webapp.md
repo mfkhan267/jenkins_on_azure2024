@@ -208,7 +208,9 @@ You may now test your Web App by clicking on BROWSE to confirm that the Web App 
 
 # APP IS WORKING
 
-![image](https://user-images.githubusercontent.com/113396342/218913540-1439882a-3208-43ef-9a03-fd9cea84dc96.png)
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/168e4609-e4a7-4639-bf06-f55530b8501a)
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/40ef71fc-4599-4ff3-ab29-b8e197168701)
 
 ## Thank you for taking the time to read this blog.I hope that the information provided here proves to be useful in your efforts to efficiently deploy your applications. Best of luck.
 
