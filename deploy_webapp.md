@@ -59,10 +59,10 @@ Accept default values for the remaining settings. Then select Review + create. A
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/42957d0c-d64f-4083-a354-4d7350ff848d)
 
+Once the Web App is created, you may review the settings as shown below
 
-- You know what to do ! Go ahead and set up your Jenkins 
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/60aa8dd8-2c15-4649-a88e-44556449e1a2)
 
-![Screenshot 2023-02-14 at 9 08 24 PM](https://user-images.githubusercontent.com/113396342/218909324-886f597a-c122-4be2-b076-efaf2df1e2d9.png)
 
 #
 
