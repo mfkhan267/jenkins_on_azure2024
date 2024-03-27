@@ -68,17 +68,6 @@ You may now test your Web App by clicking on BROWSE to confirm that the Web App 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/050a566c-866f-419b-9eb8-9290e5cfe8ab)
 
 
-#
-
-3- Once the Jenkins is all set up , install the needed plugins ( Azure app Service )
-
-   - From Dashboard > Manage Jenkins > Manage Plugins > Available Plugins 
-   
-     - Once select the plugins , select install without restart
-   
-   ![Screenshot 2023-02-10 at 12 05 54 PM](https://user-images.githubusercontent.com/113396342/218909850-cfd095ba-6c0c-4cba-b0ca-d5ab361799a5.png)
-   #
-   
 4- Credentials need to be added in order to have connection with ACR and our Azure account
 
    - From Dashboard > Manage Jenkins > Credentials > System > Global credentials > Add credentials
@@ -92,17 +81,17 @@ You may now test your Web App by clicking on BROWSE to confirm that the Web App 
 - In order to have connection with our Azure account , I created service principal and made the connection with Jenkins
 
 ![Screenshot 2023-02-10 at 12 14 43 PM](https://user-images.githubusercontent.com/113396342/218910777-00c73cc2-eac1-4871-a52f-1029264ba964.png)
-#
+
 
 ## Here are the needed credentials to be able to keep going for the further steps
 
 ![Screenshot 2023-02-10 at 12 14 59 PM](https://user-images.githubusercontent.com/113396342/218910935-5c26dda0-7e69-43ea-8652-097e245705c1.png)
-#
+
 
 5- Let's create the pipeline.
 
 ![Screenshot 2023-02-10 at 12 15 39 PM](https://user-images.githubusercontent.com/113396342/218911109-6d34c9e1-b951-419d-beaf-6b4144e15079.png)
-#
+
 
 6- Starting our pipeline firstly by checking our code from the repository
      
@@ -266,10 +255,10 @@ You may now test your Web App by clicking on BROWSE to confirm that the Web App 
 
 Since my nodeJS application is listening on port 8080, you will need to open the VM Port accordingly
 
-az vm open-port \
---resource-group jenkins267 \
---name jenkinsvm267  \
---port 8080 --priority 1010
+         az vm open-port \
+         --resource-group jenkins267 \
+         --name jenkinsvm267  \
+         --port 8080 --priority 1010
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/dcac1982-06aa-4ece-a76a-5027549a4a58)
 
