@@ -19,7 +19,24 @@ To deploy a Java web app to Azure, you can use Azure CLI in a Jenkins Pipeline. 
 > * Jenkins - Install Jenkins on a Linux VM
 > * Azure CLI: Install Azure CLI (version 2.0.67 or higher) on the Jenkins server.
 
-# Create the Azure container registry
+# Create an Azure Service Principal
+
+Automated tools like Jenkins, Terraform and others that use Azure services should always have restricted permissions to ensure that Azure resources are secure. Therefore, instead of having applications sign in as a fully privileged user, Azure offers service principals. An Azure service principal is an identity created for use with applications, hosted services, and automated tools. This identity is used to access Azure resources.
+
+Let us now create a service principal with the `Contributor' role and scoped to my Tenant Subscription
+
+      az ad sp create-for-rbac --name myappspn1 --role contributor --scopes /subscriptions/<Azure Tenant Subscription ID>
+
+Output console should look like:
+
+      {
+        "appId": "myAppId",
+        "displayName": "myServicePrincipalName",
+        "password": "myServicePrincipalPassword",
+        "tenant": "myTentantId"
+      }
+
+# Create the Azure Container Registry
 
 Azure Container Registry is a private registry service for building, storing, and managing container images and related artifacts. In this quickstart, you create an Azure container registry instance with the Azure portal. Then, use Docker commands to push a container image into the registry, and finally pull and run the image from your registry.
 
