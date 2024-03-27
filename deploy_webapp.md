@@ -43,11 +43,24 @@ You may fetch the access keys to your Azure Container Registry as shown below (y
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/f12efb87-15ca-4590-b30d-5314ee2f7ef8)
 
-#
+# Create a Web App for Containers in Azure
 
-2- Provision a Jenkins Server , can use dind ( docker in docker container which contains Jenkins ) >> <a href="https://github.com/hkaanturgut/container-jenkins-with-nodejs?organization=hkaanturgut&organization=hkaanturgut" target="_blank">ACR Terraspace Codes</a> 
+App Service Web Apps lets you quickly build, deploy, and scale enterprise-grade web, mobile, and API apps running on any platform. Meet rigorous performance, scalability, security and compliance requirements while using a fully managed platform to perform infrastructure maintenance.
 
-![Screenshot 2023-02-14 at 9 07 25 PM](https://user-images.githubusercontent.com/113396342/218909111-db4de5d2-a46a-4b66-8a7c-1f2cf0424f16.png)
+Sign in to the Azure portal and create a Web App for Containers
+
+Select Create a resource > Web App for Containers.
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/9adf3b84-1cb1-4f76-8174-1f736e6666d1)
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/15ac0618-7cdc-4696-ac77-e5dba48dd802)
+
+Give your web app a unique App Name name within Azure.
+
+Accept default values for the remaining settings. Then select Review + create. After reviewing the settings, select Create.
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/42957d0c-d64f-4083-a354-4d7350ff848d)
+
 
 - You know what to do ! Go ahead and set up your Jenkins 
 
