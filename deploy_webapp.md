@@ -8,7 +8,7 @@ To deploy a Java web app to Azure, you can use Azure CLI in a Jenkins Pipeline. 
 > * Create a Jenkins VM
 > * Configure Jenkins
 > * Create an Azure container registry
-> * Create a web app in Azure
+> * Create a Web App in Azure
 > * Prepare your GitHub repository with the App Code
 > * Create your Jenkins pipeline
 > * Run the pipeline and verify the web app
@@ -82,6 +82,21 @@ You may now test your Web App by clicking on BROWSE to confirm that the Web App 
 
 ![Screenshot 2023-02-10 at 12 14 43 PM](https://user-images.githubusercontent.com/113396342/218910777-00c73cc2-eac1-4871-a52f-1029264ba964.png)
 
+## Add Azure service principal to a Jenkins credential
+
+The following steps show how to manager your Azure credential with Jenkins:
+
+1. Within the Jenkins dashboard, select **Credentials -> System ->**.
+
+1. Select **Global credentials(unrestricted)**.
+
+1. Select **Add Credentials** to add a [Microsoft Azure service principal](/cli/azure/create-an-azure-service-principal-azure-cli?toc=%252fazure%252fazure-resource-manager%252ftoc.json). Make sure that the credential kind is ***Username with password*** and enter the following items:
+
+    * **Username**: Service principal `appId`
+    * **Password**: Service principal `password`
+    * **ID**: Credential identifier (such as `AzureServicePrincipal`)
+  
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/c5814fe2-61b8-45c7-97bd-2fa556dcc30e)
 
 ## Here are the needed credentials to be able to keep going for the further steps
 
