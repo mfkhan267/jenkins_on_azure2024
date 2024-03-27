@@ -1,10 +1,10 @@
-# DEPLOY-WEBAPPS-TO-AZURE-APP-SERVICE-USING-JENKINS
+# Deploy your containerized app to Azure App Service with Jenkins and the Azure CLI
 
 - Welcome to this comprehensive guide on deploying five web applications to Azure App Service using Jenkins. This Readme provides detailed instructions on the process, ensuring seamless and efficient deployment for all five applications.
 
     - Even each app does not have a Readme , the steps outlined here apply uniformly to all of them. 
     
-    ![Blank diagram (1)](https://user-images.githubusercontent.com/113396342/218916484-db7e75ab-407d-4b3f-90b7-201871786329.png)
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/23fb922a-3770-4845-8642-f7b5663cc2a4)
 
     
 #
