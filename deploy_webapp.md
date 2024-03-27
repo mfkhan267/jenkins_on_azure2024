@@ -109,8 +109,8 @@ You may now test your Web App by clicking on BROWSE to confirm that the Web App 
       pipeline {
           agent any
           environment {
-              AZURE_TENANT_ID = "61952628-b9f1-4dbe-9ea2-311ffb0da156"
-              AZURE_SUBSCRIPTION_ID = "c8105223-fff8-4acf-9281-4171ea50d6ac"
+              AZURE_TENANT_ID = "Insert your Azure Tenant ID"
+              AZURE_SUBSCRIPTION_ID = "Insert your Azure Tenant Subscription ID"
               ACR_REGISTRY = "acr267.azurecr.io"
               APP_REPO_NAME = "gsd"
           }
