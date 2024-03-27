@@ -65,7 +65,7 @@ Once the Web App is created, you may review the settings as shown below.
 
 You may now test your Web App by clicking on BROWSE to confirm that the Web App was deployed successfully.
 
-![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/0459a311-826b-4197-a7fe-f5907a4040b2)
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/050a566c-866f-419b-9eb8-9290e5cfe8ab)
 
 
 #
