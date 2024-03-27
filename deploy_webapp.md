@@ -53,8 +53,6 @@ Select Create a resource > Web App for Containers.
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/9adf3b84-1cb1-4f76-8174-1f736e6666d1)
 
-![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/15ac0618-7cdc-4696-ac77-e5dba48dd802)
-
 Give your web app a unique App Name name within Azure.
 
 Accept default values for the remaining settings. Then select Review + create. After reviewing the settings, select Create.
