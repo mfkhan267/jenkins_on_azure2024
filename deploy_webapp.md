@@ -47,7 +47,7 @@ You may fetch the access keys to your Azure Container Registry as shown below (y
 
 App Service Web Apps lets you quickly build, deploy, and scale enterprise-grade web, mobile, and API apps running on any platform. Meet rigorous performance, scalability, security and compliance requirements while using a fully managed platform to perform infrastructure maintenance.
 
-Sign in to the Azure portal and create a Web App for Containers
+Sign in to the Azure portal and create a Web App for Containers.
 
 Select Create a resource > Web App for Containers.
 
@@ -59,9 +59,13 @@ Accept default values for the remaining settings. Then select Review + create. A
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/42957d0c-d64f-4083-a354-4d7350ff848d)
 
-Once the Web App is created, you may review the settings as shown below
+Once the Web App is created, you may review the settings as shown below.
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/60aa8dd8-2c15-4649-a88e-44556449e1a2)
+
+You may now test your Web App by clicking on BROWSE to confirm that the Web App was deployed successfully.
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/0459a311-826b-4197-a7fe-f5907a4040b2)
 
 
 #
