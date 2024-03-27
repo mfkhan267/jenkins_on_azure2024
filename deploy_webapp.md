@@ -262,9 +262,14 @@ You may now test your Web App by clicking on BROWSE to confirm that the Web App 
 ![Screenshot 2023-02-10 at 12 52 16 PM](https://user-images.githubusercontent.com/113396342/218913099-5ea5abba-6c0c-4999-a901-fd4c5dbfe932.png)
 #
 
-## Make sure to add WEBSITES_PORT setting from ;
+# Ensure that your Azure VM has the NSG policy to allow inbound connections on the port that your application is listening on
 
 Since my nodeJS application is listening on port 8080, you will need to open the VM Port accordingly
+
+az vm open-port \
+--resource-group jenkins267 \
+--name jenkinsvm267  \
+--port 8080 --priority 1010
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/dcac1982-06aa-4ece-a76a-5027549a4a58)
 
