@@ -264,10 +264,9 @@ You may now test your Web App by clicking on BROWSE to confirm that the Web App 
 
 ## Make sure to add WEBSITES_PORT setting from ;
 
-    - Configuration > Application Settings > Add WEBSITES_PORT ( add your app's port ) > Save
+Since my nodeJS application is listening on port 8080, you will need to open the VM Port accordingly
 
-![Screenshot 2023-02-10 at 12 53 02 PM](https://user-images.githubusercontent.com/113396342/218913442-d08e81fd-58cc-49e5-b2ca-ae25e0b17e9f.png)
-#
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/dcac1982-06aa-4ece-a76a-5027549a4a58)
 
 # Testing your Web App that should now be running your newly generated docker image with your App Code
 
