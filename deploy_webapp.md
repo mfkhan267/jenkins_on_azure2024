@@ -15,9 +15,9 @@ To deploy a Java web app to Azure, you can use Azure CLI in a Jenkins Pipeline. 
 
 # Prerequisites
 
-    Azure subscription: If you don't have an Azure subscription, create a free account before you begin.
-    Jenkins - Install Jenkins on a Linux VM
-    Azure CLI: Install Azure CLI (version 2.0.67 or higher) on the Jenkins server.
+> * Azure subscription: If you don't have an Azure subscription, create a free account before you begin.
+> * Jenkins - Install Jenkins on a Linux VM
+> * Azure CLI: Install Azure CLI (version 2.0.67 or higher) on the Jenkins server.
 
 # Project Task and Steps:
 1- Create a Azure Container Registry >>> <a href="https://github.com/hkaanturgut/DEPLOY-WEBAPPS-TO-AZURE-APP-SERVICE-USING-JENKINS/tree/main/terraspace%20codes/app/stacks/acr" target="_blank">ACR Terraspace Codes</a> 
