@@ -23,11 +23,23 @@ To deploy a Java web app to Azure, you can use Azure CLI in a Jenkins Pipeline. 
 
 Azure Container Registry is a private registry service for building, storing, and managing container images and related artifacts. In this quickstart, you create an Azure container registry instance with the Azure portal. Then, use Docker commands to push a container image into the registry, and finally pull and run the image from your registry.
 
+Sign in to the Azure portal and create a container registry
+
+Select Create a resource > Containers > Container Registry.
+
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/15ac0618-7cdc-4696-ac77-e5dba48dd802)
+
+Create a new resource group in the East US 2 location named jenkinsRG, and a unique Registry name within Azure.
+
+Accept default values for the remaining settings. Then select Review + create. After reviewing the settings, select Create.
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/886fcfe8-4a02-4b95-bc42-9ab71a9669a4)
 
+Review the resource as below
+
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/09ceeac3-0834-4358-a0db-5d507a1820ef)
+
+You may fetch the access keys to your Azure Container Registry as shown below (you will need this later on as we proceed further)
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/f12efb87-15ca-4590-b30d-5314ee2f7ef8)
 
