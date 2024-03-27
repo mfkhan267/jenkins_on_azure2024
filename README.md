@@ -215,4 +215,4 @@ If you encounter any problems configuring Jenkins, refer to the [Jenkins install
 
 ## Next steps
 
-[Install Docker on Azure VM running Jenkins Part 2](./install-docker-on-linux-vm.md)
+[Install Docker on Azure VM running Jenkins Part 2](./install_docker_on_linux_vm.md)
