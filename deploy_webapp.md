@@ -206,13 +206,13 @@ You may now test your Web App by clicking on BROWSE to confirm that the Web App 
 ![Screenshot 2023-02-10 at 12 53 02 PM](https://user-images.githubusercontent.com/113396342/218913442-d08e81fd-58cc-49e5-b2ca-ae25e0b17e9f.png)
 #
 
-# APP IS WORKING
+# Testing your Web App that should now be running your newly generated docker image with your App Code
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/168e4609-e4a7-4639-bf06-f55530b8501a)
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/40ef71fc-4599-4ff3-ab29-b8e197168701)
 
-## Thank you for taking the time to read this blog.I hope that the information provided here proves to be useful in your efforts to efficiently deploy your applications. Best of luck.
+
 
 
 
