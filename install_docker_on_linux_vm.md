@@ -6,17 +6,14 @@ This article shows how to install [Docker](https://docs.docker.com/engine/instal
 
 ## What is Docker?
 
->> Docker is a software platform that allows you to build, test, and deploy applications quickly. 
->> Docker packages software into standardized units called containers that have everything the software needs to run including libraries, system tools, code, and runtime. 
->> Using Docker, you can quickly deploy and scale applications into any environment and you are convinced that your code will run. Platform Agnostic.
->> Docker provides developers and admins a highly reliable, low-cost way to build, ship, and run distributed applications at any scale.
+> Docker is a software platform that allows you to build, test, and deploy applications quickly. 
+> Docker packages software into standardized units called containers that have everything the software needs to run including libraries, system tools, code, and runtime. 
+> Using Docker, you can quickly deploy and scale applications into any environment and you are convinced that your code will run. Platform Agnostic.
+> Docker provides developers and admins a highly reliable, low-cost way to build, ship, and run distributed applications at any scale.
 
 ## Why use Docker?
 
 Docker makes it really easy to install, build, test, ship and run software without worrying about its setup or dependencies and libraries.
-
-![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/08687f1c-0c10-4901-b418-2248dcfb78f7)
-
 
 ## 1. Install Docker Engine using the convenience script
 
