@@ -8,13 +8,15 @@ In this tutorial you will learn to deploy a Java NodeJS web app to Azure, with t
 Here are quick steps that we shall follow:
 
 > * Create a Jenkins VM (Part 1)
+> * Install Docker Engine on the Azure VM that is running Jenkins (Part 2)
 > * Create an Azure Service Principal
 > * Create an Azure container registry
 > * Create a Web App in Azure
-> * Configure Jenkins to managed your Credentials
+> * Configure Jenkins to manage your Credentials
+> * Create your Jenkins pipeline
 > * Prepare your GitHub repository with the App Code
 > * Create your Jenkins pipeline
-> * Run the pipeline and verify the web app
+> * Run the pipeline and verify the Web App is updated with the latest image build
 
 # Prerequisites
 
@@ -91,7 +93,7 @@ You may now test your Web App by clicking on BROWSE to confirm that the Web App 
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/050a566c-866f-419b-9eb8-9290e5cfe8ab)
 
-# Configure Jenkins to managed your Credentials
+# Configure Jenkins to manage your Credentials
 
 Let us now create our credentials and secrets within Jenkins. This will allow the Jenkins Pipeline jobs to connect into our Azure Account and work with Azure resources like Web App and Azure Container Registry.
 
@@ -124,6 +126,8 @@ Below are the credentials (Username and Password) for the Azure Service Principa
 Below are the credentials (Secret Text) for the Azure Tenant ID
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/b2af9a0f-5263-4246-a906-4ccc79ff5e25)
+
+# Create your Jenkins pipeline
 
 Starting our pipeline firstly by checking our code from the repository
      
