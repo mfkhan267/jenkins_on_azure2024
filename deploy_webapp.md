@@ -14,8 +14,9 @@ Here are quick steps that we shall follow:
 > * Create a Web App in Azure
 > * Configure Jenkins to manage your Credentials
 > * Create your Jenkins pipeline
+> * Run the Build manually to Deploy the new image build to your Azure Web App
 > * Prepare your GitHub repository with the App Code
-> * Create your Jenkins pipeline
+> * Create the new Automated CI-CD Jenkins pipeline to automatically execute the Build and Deploy tasks
 > * Run the pipeline and verify the Web App is updated with the latest image build
 
 # Prerequisites
