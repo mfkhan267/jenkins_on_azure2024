@@ -3,12 +3,15 @@
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/23fb922a-3770-4845-8642-f7b5663cc2a4)
 
-To deploy a Java web app to Azure, you can use Azure CLI in a Jenkins Pipeline. In this tutorial, you do the following tasks:
+In this tutorial you will learn to deploy a Java NodeJS web app to Azure, with the Azure CLI in a Jenkins Pipeline. 
 
-> * Create a Jenkins VM
-> * Configure Jenkins
+Here are quick steps that we shall follow:
+
+> * Create a Jenkins VM (Part 1)
+> * Create an Azure Service Principal
 > * Create an Azure container registry
 > * Create a Web App in Azure
+> * Configure Jenkins to managed your Credentials
 > * Prepare your GitHub repository with the App Code
 > * Create your Jenkins pipeline
 > * Run the pipeline and verify the web app
@@ -27,7 +30,7 @@ Let us now create a service principal with the `Contributor' role and scoped to 
 
       az ad sp create-for-rbac --name myappspn1 --role contributor --scopes /subscriptions/<Azure Tenant Subscription ID>
 
-Output console should look like:
+Output console should look like this:
 
       {
         "appId": "myAppId",
@@ -36,9 +39,11 @@ Output console should look like:
         "tenant": "myTentantId"
       }
 
+Make on the above items as you will need them for managing credentials within Jenkins
+
 # Create the Azure Container Registry
 
-Azure Container Registry is a private registry service for building, storing, and managing container images and related artifacts. In this quickstart, you create an Azure container registry instance with the Azure portal. Then, use Docker commands to push a container image into the registry, and finally pull and run the image from your registry.
+Azure Container Registry is a private registry service for building, storing, and managing container images and related artifacts. In this quickstart, we shall create an Azure container registry instance with the Azure portal. Then, use Docker commands to push a container image into the registry, and finally pull and run the image from the same registry.
 
 Sign in to the Azure portal and create a container registry
 
@@ -56,13 +61,15 @@ Review the resource as below
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/09ceeac3-0834-4358-a0db-5d507a1820ef)
 
-You may fetch the access keys to your Azure Container Registry as shown below (you will need this later on as we proceed further)
+You may want to get the access keys to your Azure Container Registry as shown below (you will need this later on as we proceed further)
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/f12efb87-15ca-4590-b30d-5314ee2f7ef8)
 
 # Create a Web App for Containers in Azure
 
 App Service Web Apps lets you quickly build, deploy, and scale enterprise-grade web, mobile, and API apps running on any platform. Meet rigorous performance, scalability, security and compliance requirements while using a fully managed platform to perform infrastructure maintenance.
+
+Let us now create ourselves a Web App for Containers
 
 Sign in to the Azure portal and create a Web App for Containers.
 
@@ -84,21 +91,12 @@ You may now test your Web App by clicking on BROWSE to confirm that the Web App 
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/050a566c-866f-419b-9eb8-9290e5cfe8ab)
 
+# Configure Jenkins to managed your Credentials
 
-4- Credentials need to be added in order to have connection with ACR and our Azure account
+We will not create our Credentials and Secrets within Jenkins. This will allow the Jenkins Pipeline job to connect into our Azure Account and work with Azure resources like Web App and ACR.
 
-   - From Dashboard > Manage Jenkins > Credentials > System > Global credentials > Add credentials
+From the Jenkins Dashboard > Manage Jenkins > Credentials > System > Global credentials > Add credentials
    
-   ![Screenshot 2023-02-10 at 12 10 31 PM](https://user-images.githubusercontent.com/113396342/218910382-b6913906-e7f6-43a1-ba17-4e927a117fc1.png)
-
-- Add the selected container registry credentials , in this project it is ACR.
-
-![Screenshot 2023-02-10 at 12 10 56 PM](https://user-images.githubusercontent.com/113396342/218910527-eb03c2ca-a840-45db-a42c-64c6b7ec2a5e.png)
-
-- In order to have connection with our Azure account , I created service principal and made the connection with Jenkins
-
-![Screenshot 2023-02-10 at 12 14 43 PM](https://user-images.githubusercontent.com/113396342/218910777-00c73cc2-eac1-4871-a52f-1029264ba964.png)
-
 ## Add Azure service principal to a Jenkins credential
 
 The following steps show how to manager your Azure credential with Jenkins:
@@ -115,7 +113,7 @@ The following steps show how to manager your Azure credential with Jenkins:
   
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/b7e51649-d6bf-450f-af0f-0d492b46dace)
 
-Below are the Azure Container Rregistry credentials (Username and Password)
+Below are the Azure Container Registry credentials (Username and Password)
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/9e0b0a5e-3dc0-454c-a1a6-f2681ec5f450)
 
@@ -127,17 +125,7 @@ Below are the credentials (Secret Text) for the Azure Tenant ID
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/b2af9a0f-5263-4246-a906-4ccc79ff5e25)
 
-## Here are the needed credentials to be able to keep going for the further steps
-
-![Screenshot 2023-02-10 at 12 14 59 PM](https://user-images.githubusercontent.com/113396342/218910935-5c26dda0-7e69-43ea-8652-097e245705c1.png)
-
-
-5- Let's create the pipeline.
-
-![Screenshot 2023-02-10 at 12 15 39 PM](https://user-images.githubusercontent.com/113396342/218911109-6d34c9e1-b951-419d-beaf-6b4144e15079.png)
-
-
-6- Starting our pipeline firstly by checking our code from the repository
+Starting our pipeline firstly by checking our code from the repository
      
       pipeline {
           agent any
