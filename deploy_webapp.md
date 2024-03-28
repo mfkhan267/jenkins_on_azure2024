@@ -205,8 +205,6 @@ Starting our pipeline firstly by checking our code from the repository
           }
       }
 
-## RELEASE TO AZURE WEB APPS
-
 # Ensure that your Azure VM has the NSG policy to allow inbound connections on the port that your application is listening on
 
 Since my nodeJS application is listening on port 8080, you will need to open the VM Port accordingly
@@ -217,6 +215,8 @@ Since my nodeJS application is listening on port 8080, you will need to open the
       --port 8080 --priority 1010
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/dcac1982-06aa-4ece-a76a-5027549a4a58)
+
+# Deploy the new image build to your Azure Web App
 
 # Testing your Web App that should now be running your newly generated docker image with your App Code
 
