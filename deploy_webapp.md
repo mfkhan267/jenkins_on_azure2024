@@ -3,7 +3,7 @@
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/23fb922a-3770-4845-8642-f7b5663cc2a4)
 
-In this tutorial you will learn to deploy a Java NodeJS web app to Azure, with the Azure CLI in a Jenkins Pipeline. 
+In this tutorial you will learn to dockerize your sample Java NodeJS application and deploy the same to Azure Web App, with the Azure CLI in a Jenkins Pipeline. 
 
 Here are quick steps that we shall follow:
 
