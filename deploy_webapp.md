@@ -111,7 +111,7 @@ The following steps show how to manager your Azure credential with Jenkins:
 
     * **Username**: Service principal `appId`
     * **Password**: Service principal `password`
-    * **ID**: Credential identifier (such as `AzureServicePrincipal`)
+    * **ID**: Credential identifier (such as `AzureServicePrincipal` OR `asp`)
   
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/c5814fe2-61b8-45c7-97bd-2fa556dcc30e)
 
