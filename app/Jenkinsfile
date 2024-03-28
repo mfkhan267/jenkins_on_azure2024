@@ -59,8 +59,8 @@ pipeline {
                 // sh 'az webapp config container set --name tetris-webapp267 --resource-group jenkins267 --docker-custom-image-name nginx:latest'
                 // sh 'az webapp config container set --name tetris-webapp267 --resource-group jenkins267 --docker-custom-image-name mfk267/catcontainer:latest'
                 // sh 'az webapp config container set --name tetris-webapp267 --resource-group jenkins267 --docker-custom-image-name mfk267/gsd:latest'
-                sh 'echo Successfully updated the tetris-webapp267 container app with the image version ${BUILD_NUMBER}'
                 }
+                sh 'echo Successfully updated the tetris-webapp267 container app with the image version ${BUILD_NUMBER}'
             }
         }
     }
