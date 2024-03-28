@@ -51,4 +51,4 @@ There you have it. You have successfully installed the docker engine. It is time
 
 ## Next steps
 
-[Part 3 - Coming Soon]
+[Deploy your NodeJS Application to Azure Web App Part 3](./deploy_webapp.md)
