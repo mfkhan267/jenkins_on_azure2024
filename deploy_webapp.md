@@ -128,6 +128,17 @@ Below are the credentials (Secret Text) for the Azure Tenant ID
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/b2af9a0f-5263-4246-a906-4ccc79ff5e25)
 
+# Ensure that your Azure VM has the NSG policy to allow inbound connections on the port that your application is listening on
+
+Since my nodeJS application is listening on port 8080, you will need to open the VM Port accordingly
+
+      az vm open-port \
+      --resource-group jenkins267 \
+      --name jenkinsvm267  \
+      --port 8080 --priority 1010
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/dcac1982-06aa-4ece-a76a-5027549a4a58)
+
 # Create your Jenkins pipeline
 
 This is the pipeline code that we will use for this tutorial. It is also uploaded as a github repo HERE
@@ -214,22 +225,13 @@ Paste the pipeline code into the Pipeline script box as shown below and click `S
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/2444d14c-0f2d-4298-a529-184f1e203eff)
 
+# Deploy the new image build to your Azure Web App
+
 On the Jenkins Pipeline Job page >> Click `Build Now`
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/9ac1a21e-72ef-40e2-9944-3502faa76101)
 
-# Ensure that your Azure VM has the NSG policy to allow inbound connections on the port that your application is listening on
-
-Since my nodeJS application is listening on port 8080, you will need to open the VM Port accordingly
-
-      az vm open-port \
-      --resource-group jenkins267 \
-      --name jenkinsvm267  \
-      --port 8080 --priority 1010
-
-![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/dcac1982-06aa-4ece-a76a-5027549a4a58)
-
-# Deploy the new image build to your Azure Web App
+Wait until the Build is 
 
 # Testing your Web App that should now be running your newly generated docker image with your App Code
 
