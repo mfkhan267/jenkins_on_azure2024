@@ -130,27 +130,27 @@ Starting our pipeline firstly by checking our code from the repository
       pipeline {
           agent any
           environment {
-              AZURE_TENANT_ID = "Insert your Azure Tenant ID"
-              AZURE_SUBSCRIPTION_ID = "Insert your Azure Tenant Subscription ID"
+              AZURE_TENANT_ID = credentials('azure-tenant-id')
               ACR_REGISTRY = "acr267.azurecr.io"
               APP_REPO_NAME = "gsd"
           }
+      
           stages {
               stage('git checkout') {
                   steps {
                     checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/mfkhan267/jenkins_on_azure2024.git']]])
                     sh 'pwd'
                     sh 'ls -ltr'
-                    dir("${env.WORKSPACE}/app"){
+                    dir('app'){
                           sh 'pwd'
                               }
                           }
                                     }
               stage('build docker image'){
                   steps{
-          	        dir("${env.WORKSPACE}/app"){
+          	        dir('app'){
                           sh 'pwd'
-                          sh 'docker build --force-rm -t "$ACR_REGISTRY/$APP_REPO_NAME:$BUILD_NUMBER" .'
+                          sh 'docker build --force-rm -t ${ACR_REGISTRY}/${APP_REPO_NAME}:${BUILD_NUMBER} .'
                           sh 'docker image ls'
                               }
                   }
@@ -158,9 +158,9 @@ Starting our pipeline firstly by checking our code from the repository
               stage('push image'){
                   steps{
                       withCredentials([usernamePassword(credentialsId: 'acr', passwordVariable: 'password', usernameVariable: 'username')]) {
-                      sh 'echo Pushing Image "$ACR_REGISTRY/$APP_REPO_NAME:$BUILD_NUMBER" to the ACR'
-                      sh 'echo ${password} | docker login "$ACR_REGISTRY" --username ${username} --password-stdin'
-                      sh 'docker push "$ACR_REGISTRY/$APP_REPO_NAME:$BUILD_NUMBER"'
+                      sh 'echo Pushing Image ${ACR_REGISTRY}/${APP_REPO_NAME}:${BUILD_NUMBER} to the ACR'
+                      sh 'echo ${password} | docker login ${ACR_REGISTRY} --username ${username} --password-stdin'
+                      sh 'docker push ${ACR_REGISTRY}/${APP_REPO_NAME}:${BUILD_NUMBER}'
                       }
                   }
               }
@@ -183,12 +183,12 @@ Starting our pipeline firstly by checking our code from the repository
                       sh 'az login --service-principal -u ${username} -p ${password} --tenant ${AZURE_TENANT_ID}'
                       }
                       withCredentials([usernamePassword(credentialsId: 'acr', passwordVariable: 'password', usernameVariable: 'username')]) {
-                      sh 'az webapp config container set --name my-container-app267 --resource-group jenkinsRG --docker-custom-image-name "$ACR_REGISTRY/$APP_REPO_NAME:$BUILD_NUMBER" --docker-registry-server-url https://"$ACR_REGISTRY" --docker-registry-server-user ${username} --docker-registry-server-password ${password}'
-                      //sh 'az webapp config container set --name tetris-webapp267 --resource-group jenkins267 --docker-custom-image-name "$ACR_REGISTRY/$APP_REPO_NAME:$BUILD_NUMBER" --docker-registry-server-url https://"$ACR_REGISTRY" --docker-registry-server-user ${username} --docker-registry-server-password ${password}'
+                      //sh 'az webapp config container set --name my-container-app267 --resource-group jenkinsRG --docker-custom-image-name "$ACR_REGISTRY/$APP_REPO_NAME:$BUILD_NUMBER" --docker-registry-server-url https://"$ACR_REGISTRY" --docker-registry-server-user ${username} --docker-registry-server-password ${password}'
+                      sh 'az webapp config container set --name tetris-webapp267 --resource-group jenkins267 --docker-custom-image-name ${ACR_REGISTRY}/${APP_REPO_NAME}:${BUILD_NUMBER} --docker-registry-server-url https://${ACR_REGISTRY} --docker-registry-server-user ${username} --docker-registry-server-password ${password}'
                       // sh 'az webapp config container set --name tetris-webapp267 --resource-group jenkins267 --docker-custom-image-name nginx:latest'
                       // sh 'az webapp config container set --name tetris-webapp267 --resource-group jenkins267 --docker-custom-image-name mfk267/catcontainer:latest'
                       // sh 'az webapp config container set --name tetris-webapp267 --resource-group jenkins267 --docker-custom-image-name mfk267/gsd:latest'
-                      sh 'echo Successfully updated the tetris-webapp267 container app with the image version "$BUILD_NUMBER"'
+                      sh 'echo Successfully updated the tetris-webapp267 container app with the image version ${BUILD_NUMBER}'
                       }
                   }
               }
