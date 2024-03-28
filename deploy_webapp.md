@@ -39,7 +39,7 @@ Output console should look like this:
         "tenant": "myTentantId"
       }
 
-Make on the above items as you will need them for managing credentials within Jenkins
+Make a note of the above and keep them handy as you will need them later for managing credentials within Jenkins
 
 # Create the Azure Container Registry
 
@@ -93,11 +93,11 @@ You may now test your Web App by clicking on BROWSE to confirm that the Web App 
 
 # Configure Jenkins to managed your Credentials
 
-We will not create our Credentials and Secrets within Jenkins. This will allow the Jenkins Pipeline job to connect into our Azure Account and work with Azure resources like Web App and ACR.
+Let us now create our credentials and secrets within Jenkins. This will allow the Jenkins Pipeline jobs to connect into our Azure Account and work with Azure resources like Web App and Azure Container Registry.
 
 From the Jenkins Dashboard > Manage Jenkins > Credentials > System > Global credentials > Add credentials
    
-## Add Azure service principal to a Jenkins credential
+## Add an Azure service principal inside the Jenkins Credential Manager
 
 The following steps show how to manager your Azure credential with Jenkins:
 
