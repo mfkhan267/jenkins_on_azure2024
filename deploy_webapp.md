@@ -217,21 +217,27 @@ This is the pipeline code that we will use for this tutorial. It is also uploade
           }
       }
 
-Go to Jenkins >> Dashboard >> New Item >> Enter Job Name >> Select `Pipeline` >> Click `OK`
+Go to Jenkins >> Dashboard >> New Item >> Enter Job Name >> Select **Pipeline** >> Click **OK**
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/2319a7cc-ae8d-48d5-b1b5-f3ee6af05fda)
 
-Paste the pipeline code into the Pipeline script box as shown below and click `Save`
+Paste the pipeline code into the Pipeline script box as shown below and click **Save**
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/2444d14c-0f2d-4298-a529-184f1e203eff)
 
 # Deploy the new image build to your Azure Web App
 
-On the Jenkins Pipeline Job page >> Click `Build Now`
+On the Jenkins Pipeline Job page >> Click **Build Now**
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/9ac1a21e-72ef-40e2-9944-3502faa76101)
 
-Wait until the Build is 
+Wait until the Jenkins Pipeline build job is over. A graphic below the **Build History** heading indicates that the job is being executed or completed. Go to the job build and console output to see the results.
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/3654e0e8-dd51-4c37-b1c3-a0f85594ba83)
+
+Congratulations! You have successfully **Deployed** your containerized app to your Azure Web App. Your Azure Web App should now be running your newly generated docker image with your App Code
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/a959bee1-0c3f-404f-b3e5-766d311ac295)
 
 # Testing your Web App that should now be running your newly generated docker image with your App Code
 
@@ -239,9 +245,3 @@ Wait until the Build is
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/40ef71fc-4599-4ff3-ab29-b8e197168701)
 
-
-
-
-
-
-   
