@@ -7,8 +7,8 @@ In this tutorial you will learn to dockerize your sample Java NodeJS application
 
 Here are quick steps that we shall follow:
 
-> * Create a Jenkins VM (Part 1) [Create a Jenkins Linux VM Part 1](./README.md)
-> * Install Docker Engine on the Azure VM that is running Jenkins (Part 2) [Install Docker on a Linux VM Part 3](./install_docker_on_linux.md)
+> * Create a Jenkins VM [Create a Jenkins Linux VM Part 1](./README.md)
+> * Install Docker Engine on the Azure VM that is running Jenkins [Install Docker on a Linux VM Part 2](./install_docker_on_linux.md)
 > * Create an Azure Service Principal
 > * Create an Azure container registry
 > * Create a Web App in Azure
