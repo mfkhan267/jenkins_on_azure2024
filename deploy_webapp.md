@@ -130,7 +130,7 @@ Below are the credentials (Secret Text) for the Azure Tenant ID
 
 # Create your Jenkins pipeline
 
-Starting our pipeline firstly by checking our code from the repository
+This is the pipeline code that we will use for this tutorial. It is also uploaded as a github repo HERE
      
       pipeline {
           agent any
@@ -205,6 +205,18 @@ Starting our pipeline firstly by checking our code from the repository
               }
           }
       }
+
+Go to Jenkins >> Dashboard >> New Item >> Enter Job Name >> Select `Pipeline` >> Click `OK`
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/2319a7cc-ae8d-48d5-b1b5-f3ee6af05fda)
+
+Paste the pipeline code into the Pipeline script box as shown below and click `Save`
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/2444d14c-0f2d-4298-a529-184f1e203eff)
+
+On the Jenkins Pipeline Job page >> Click `Build Now`
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/9ac1a21e-72ef-40e2-9944-3502faa76101)
 
 # Ensure that your Azure VM has the NSG policy to allow inbound connections on the port that your application is listening on
 
