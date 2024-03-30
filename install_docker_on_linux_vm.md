@@ -2,7 +2,7 @@
 
 # Part 2
 
-This article shows how to install [Docker](https://docs.docker.com/engine/install/ubuntu) on an Ubuntu Linux VM for developing, packaging and shipping your containerized apps.
+This article shows how to install [Docker](https://docs.docker.com/engine/install/ubuntu) on an Ubuntu Linux VM for developing, packaging and shipping your containerized apps. We will need Docker to build and push our Containerized OCI Image with Jenkins.
 
 ## What is Docker?
 
