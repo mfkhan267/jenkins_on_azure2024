@@ -199,11 +199,7 @@ This is the pipeline code that we will use for this tutorial. It is also uploade
                       sh 'az login --service-principal -u ${username} -p ${password} --tenant ${AZURE_TENANT_ID}'
                       }
                       withCredentials([usernamePassword(credentialsId: 'acr', passwordVariable: 'password', usernameVariable: 'username')]) {
-                      //sh 'az webapp config container set --name my-container-app267 --resource-group jenkinsRG --docker-custom-image-name "$ACR_REGISTRY/$APP_REPO_NAME:$BUILD_NUMBER" --docker-registry-server-url https://"$ACR_REGISTRY" --docker-registry-server-user ${username} --docker-registry-server-password ${password}'
                       sh 'az webapp config container set --name tetris-webapp267 --resource-group jenkins267 --docker-custom-image-name ${ACR_REGISTRY}/${APP_REPO_NAME}:${BUILD_NUMBER} --docker-registry-server-url https://${ACR_REGISTRY} --docker-registry-server-user ${username} --docker-registry-server-password ${password}'
-                      // sh 'az webapp config container set --name tetris-webapp267 --resource-group jenkins267 --docker-custom-image-name nginx:latest'
-                      // sh 'az webapp config container set --name tetris-webapp267 --resource-group jenkins267 --docker-custom-image-name mfk267/catcontainer:latest'
-                      // sh 'az webapp config container set --name tetris-webapp267 --resource-group jenkins267 --docker-custom-image-name mfk267/gsd:latest'
                       sh 'echo Successfully updated the tetris-webapp267 container app with the image version ${BUILD_NUMBER}'
                       }
                   }
@@ -213,6 +209,8 @@ This is the pipeline code that we will use for this tutorial. It is also uploade
               always {
                   echo 'Deleting all local images'
                   sh 'docker image prune -af'
+                  sh 'docker logout'
+                  sh 'az logout'
               }
           }
       }
