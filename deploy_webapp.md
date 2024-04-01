@@ -24,6 +24,7 @@ Here are quick steps that we shall follow:
 > * Azure subscription: If you don't have an Azure subscription, create a free account before you begin.
 > * Jenkins - Install Jenkins on a Linux VM
 > * Azure CLI: Install Azure CLI (version 2.0.67 or higher) on the Jenkins server.
+> * Sample Application Code can be found at my Github Repository [HERE](https://github.com/mfkhan267/jenkins_on_azure2024.git)
 
 # Create an Azure Service Principal
 
@@ -108,7 +109,7 @@ The following steps show how to manager your Azure credential with Jenkins:
 
 1. Select **Global credentials(unrestricted)**.
 
-1. Select **Add Credentials** to add a [Microsoft Azure service principal](/cli/azure/create-an-azure-service-principal-azure-cli?toc=%252fazure%252fazure-resource-manager%252ftoc.json). Make sure that the credential kind is ***Username with password*** and enter the following items:
+1. Select **Add Credentials** to add a Microsoft Azure service principal. Make sure that the credential kind is ***Username with password*** and enter the following items:
 
     * **Username**: Service principal `appId`
     * **Password**: Service principal `password`
