@@ -141,6 +141,8 @@ Since my nodeJS application is listening on port 8080, you will need to open the
 
 # Create your Jenkins pipeline
 
+## Docker Build, Push and Run
+
 This is the pipeline code that we will use for this tutorial. It is also uploaded as a github repo HERE
      
       pipeline {
