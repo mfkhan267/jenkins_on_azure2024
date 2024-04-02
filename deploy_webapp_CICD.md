@@ -27,7 +27,7 @@ Here are quick steps that we shall follow:
 
 Create a new GitHub repository with your application code. We will need to create a webhook for the GitHub repository that should be able to remotely trigger your builds in Jenkins everytime application changes are commited to the above application code repository.
 
-![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/c7fb3930-8bb8-4c14-a098-5f65fa4e8e3c)
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/d9537195-7f37-4353-8466-8c6d47668976)
 
 We will define the Jenkins Pipeline with the Peipeline script from SCM method as shown below
 
