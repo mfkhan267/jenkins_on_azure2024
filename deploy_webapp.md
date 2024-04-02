@@ -140,7 +140,7 @@ Since my nodeJS application is listening on port 8080, you will need to open the
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/dcac1982-06aa-4ece-a76a-5027549a4a58)
 
-# Create your Jenkins pipeline
+# Create your Jenkins pipeline (Manual Method)
 
 ## Docker Build, Push and Run
 
@@ -244,5 +244,22 @@ Congratulations! You have successfully **Deployed** your containerized app to yo
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/168e4609-e4a7-4639-bf06-f55530b8501a)
 
-![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/40ef71fc-4599-4ff3-ab29-b8e197168701)
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/f91973c4-bdf3-424c-90ba-8bac6cc6509e)
 
+# Create your Jenkins pipeline (Fully Automated CI-CD Method)
+
+## Docker Build, Push and Run
+
+Create a new GitHub repository with your application code. We will need to create a webhook for the GitHub repository that should be able to remotely trigger your builds in Jenkins everytime application changes are commited to the above application code repository.
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/c7fb3930-8bb8-4c14-a098-5f65fa4e8e3c)
+
+We will define the Jenkins Pipeline with the Peipeline script from SCM method as shown below
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/8b8fcb66-97ba-4f2a-bfaa-da0a73c50b61)
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/79fb0959-f78c-4f98-b603-4dad35fcc9cc)
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/ab82ba9c-661a-4443-849f-e80d3f13d375)
+
+This should now allow the repository webhook to remote trigger the Build Jobs for the above pipeline in Jenkins, whenever you commit changes to your application code repository.
