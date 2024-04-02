@@ -33,9 +33,9 @@ We will define the Jenkins Pipeline with the Peipeline script from SCM method as
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/8b8fcb66-97ba-4f2a-bfaa-da0a73c50b61)
 
-![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/79fb0959-f78c-4f98-b603-4dad35fcc9cc)
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/24afb02b-d6c3-40f6-9a83-c0a3ef6d3ed2)
 
-![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/ab82ba9c-661a-4443-849f-e80d3f13d375)
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/b2f5be21-3f09-453e-9aa6-d47f49c5ab3c)
 
 This should now allow the repository webhook to remote trigger the Build Jobs for the above pipeline in Jenkins, whenever you commit changes to your application code repository.
 
