@@ -27,6 +27,7 @@ Here are quick steps that we shall follow:
 > * Sample Application Code can be found at my Github Repository [HERE](https://github.com/mfkhan267/jenkins_on_azure2024.git)
 
 Note: You may use the sample pipeline as is and *NO* further changes are required in the pipeline
+
 Note: If you plan to fork the above repository into your github account, you need to change the link to the github repostory to point to your github account
 
 # Create an Azure Service Principal
@@ -150,6 +151,7 @@ Since my nodeJS application is listening on port 8080, you will need to open the
 This is the pipeline code that we will use for this tutorial. It is also uploaded as a github repo [HERE](https://github.com/mfkhan267/jenkins_on_azure2024.git)
 
 Note: You may use the sample pipeline as is and *NO* further changes are required in the pipeline
+
 Note: If you plan to fork the above repository into your github account, you need to change the link to the github repostory to point to your github account
      
       pipeline {
