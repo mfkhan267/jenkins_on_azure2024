@@ -250,7 +250,11 @@ Congratulations! You have successfully **Deployed** your containerized app to yo
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/f91973c4-bdf3-424c-90ba-8bac6cc6509e)
 
-# Create your Jenkins pipeline (Fully Automated CI-CD Method)
+## Next steps
+
+[Create your Fully Automated CI-CD Jenkins Pipeline Part 4](./deploy_webapp_CICD.md)
+
+# Create your Fully Automated CI-CD Jenkins Pipeline
 
 ## Docker Build, Push and Run
 
