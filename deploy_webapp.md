@@ -3,7 +3,7 @@
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/23fb922a-3770-4845-8642-f7b5663cc2a4)
 
-In this tutorial you will learn to dockerize your sample Java NodeJS application and deploy the same to Azure Web App, with the Azure CLI in a Jenkins Pipeline. 
+In this tutorial you will learn to dockerize a sample NodeJS application and deploy the same to Azure Web App, with the Azure CLI in a Jenkins Pipeline. 
 
 Here are quick steps that we shall follow:
 
@@ -43,7 +43,7 @@ Output console should look like this:
         "tenant": "myTentantId"
       }
 
-Make a note of the above and keep them handy as you will need them later for managing credentials within Jenkins
+Make a note of the above and keep them handy as you will need them later in the Managing credentials within Jenkins section
 
 # Create the Azure Container Registry
 
@@ -73,7 +73,7 @@ You may want to get the access keys to your Azure Container Registry as shown be
 
 App Service Web Apps lets you quickly build, deploy, and scale enterprise-grade web, mobile, and API apps running on any platform. Meet rigorous performance, scalability, security and compliance requirements while using a fully managed platform to perform infrastructure maintenance.
 
-Let us now create ourselves a Web App for Containers
+Let us now create ourselves a Web App for Containers.
 
 Sign in to the Azure portal and create a Web App for Containers.
 
@@ -103,7 +103,7 @@ From the Jenkins Dashboard > Manage Jenkins > Credentials > System > Global cred
    
 ## Add an Azure service principal inside the Jenkins Credential Manager
 
-The following steps show how to manager your Azure credential with Jenkins:
+The following steps show how to manage your Azure credential within Jenkins:
 
 1. Within the Jenkins dashboard, select **Credentials -> System ->**.
 
@@ -114,17 +114,17 @@ The following steps show how to manager your Azure credential with Jenkins:
     * **Username**: Service principal `appId`
     * **Password**: Service principal `password`
     * **ID**: Credential identifier (such as `AzureServicePrincipal` OR `asp`)
-  
+#  
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/b7e51649-d6bf-450f-af0f-0d492b46dace)
-
+#
 Below are the Azure Container Registry credentials (Username and Password)
-
+#
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/9e0b0a5e-3dc0-454c-a1a6-f2681ec5f450)
-
+#
 Below are the credentials (Username and Password) for the Azure Service Principal that you have created initially
-
+#
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/66508068-cd11-4e89-ad8a-876c6352a545)
-
+#
 Below are the credentials (Secret Text) for the Azure Tenant ID
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/b2af9a0f-5263-4246-a906-4ccc79ff5e25)
