@@ -21,6 +21,7 @@ pipeline {
             steps{
     	        dir('app'){
                     sh 'pwd'
+                    sh 'sed -i "s/WebApp/WebApp v${BUILD_NUMBER}/g" app.js'
                     sh 'docker build --force-rm -t ${ACR_REGISTRY}/${APP_REPO_NAME}:${BUILD_NUMBER} .'
                     sh 'docker image ls'
                         }
