@@ -59,7 +59,7 @@ Create a new resource group in the East US 2 location named jenkinsRG, and a uni
 
 Accept default values for the remaining settings. Then select Review + create. After reviewing the settings, select Create.
 
-![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/886fcfe8-4a02-4b95-bc42-9ab71a9669a4)
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/3825a708-ad6b-4e2f-a2e6-b4f48a549314)
 
 Review the resource as below
 
