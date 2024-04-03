@@ -248,7 +248,7 @@ Congratulations! You have successfully **Deployed** your containerized app to yo
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/168e4609-e4a7-4639-bf06-f55530b8501a)
 
-![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/f91973c4-bdf3-424c-90ba-8bac6cc6509e)
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/658952f5-2216-4492-b764-1cb6322942d1)
 
 ## Next steps
 
