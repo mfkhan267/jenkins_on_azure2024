@@ -21,6 +21,7 @@ pipeline {
             steps{
     	        dir('app'){
                     sh 'pwd'
+                    sh 'sed -i "s/WebApp/WebApp v${BUILD_NUMBER}/g" app.js'
                     sh 'docker build --force-rm -t ${ACR_REGISTRY}/${APP_REPO_NAME}:${BUILD_NUMBER} .'
                     sh 'docker image ls'
                         }
@@ -56,8 +57,13 @@ pipeline {
                 withCredentials([usernamePassword(credentialsId: 'acr', passwordVariable: 'password', usernameVariable: 'username')]) {
                 sh 'az aks get-credentials --resource-group aks_RG267 --name aks_demo267'
                 sh 'az acr show --name acr267 --resource-group jenkins267 -o table'
+                //sh 'az aks update --resource-group aks_RG267 --name aks_demo267 --attach-acr $ACR_NAME'
                 sh 'kubectl get nodes'
                 sh 'kubectl set image deployment web-deploy web-deploy=${ACR_REGISTRY}/${APP_REPO_NAME}:${BUILD_NUMBER}'
+                //sh 'az webapp config container set --name tetris-webapp267 --resource-group jenkins267 --docker-custom-image-name ${ACR_REGISTRY}/${APP_REPO_NAME}:${BUILD_NUMBER} --docker-registry-server-url https://${ACR_REGISTRY} --docker-registry-server-user ${username} --docker-registry-server-password ${password}'
+                // sh 'az webapp config container set --name tetris-webapp267 --resource-group jenkins267 --docker-custom-image-name nginx:latest'
+                // sh 'az webapp config container set --name tetris-webapp267 --resource-group jenkins267 --docker-custom-image-name mfk267/catcontainer:latest'
+                // sh 'az webapp config container set --name tetris-webapp267 --resource-group jenkins267 --docker-custom-image-name mfk267/gsd:latest'
                 }
                 sh 'echo Successfully updated the AKS Cluster web-deploy with the image version ${BUILD_NUMBER}'
             }
