@@ -114,17 +114,17 @@ The following steps show how to manage your Azure credential within Jenkins:
     * **Username**: Service principal `appId`
     * **Password**: Service principal `password`
     * **ID**: Credential identifier (such as `AzureServicePrincipal` OR `asp`)
-#  
+  
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/b7e51649-d6bf-450f-af0f-0d492b46dace)
-#
+
 Below are the Azure Container Registry credentials (Username and Password)
-#
+
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/9e0b0a5e-3dc0-454c-a1a6-f2681ec5f450)
-#
+
 Below are the credentials (Username and Password) for the Azure Service Principal that you have created initially
-#
+
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/66508068-cd11-4e89-ad8a-876c6352a545)
-#
+
 Below are the credentials (Secret Text) for the Azure Tenant ID
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/b2af9a0f-5263-4246-a906-4ccc79ff5e25)
