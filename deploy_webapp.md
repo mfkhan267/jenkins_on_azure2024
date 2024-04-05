@@ -246,7 +246,7 @@ Congratulations! You have successfully **Deployed** your containerized app to yo
 
 # Testing your Web App that should now be running your newly generated docker image with your App Code
 
-![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/8b8870e0-8def-4eff-82d6-b3aa7e74725e)
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/80ca8665-dbc7-4622-9311-90ec35ac8f90)
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/96d446a8-5377-40a0-bba1-df9f9c207b2c)
 
