@@ -55,9 +55,15 @@ Congratulations! You have successfully **Deployed** your containerized app to yo
 
 # Testing your Web App that should now be running your newly generated docker image with your App Code
 
-![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/168e4609-e4a7-4639-bf06-f55530b8501a)
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/a53a7211-5c46-4acd-aa44-25c2da831fe4)
 
-![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/f91973c4-bdf3-424c-90ba-8bac6cc6509e)
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/4a4f0954-c4a7-4d8f-9df8-13f7de5daf1d)
+
+Commit and push your changes to your application code on GitHub and this should trigger the Jenkins Pipeline Build automatically with the help of the webhook.
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/65df090e-9f8c-496c-be30-7e63880092de)
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/49ab3685-f058-4d71-88bc-39711c3ffdc3)
 
 ## Next steps
 
