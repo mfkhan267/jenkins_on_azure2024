@@ -118,7 +118,7 @@ Run [az vm show](https://learn.microsoft.com/en-us/cli/azure/vm?view=azure-cli-l
     --query [publicIps] \
     --output tsv
 
-![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/c3519e72-fce8-43c0-a194-f7c9c6fc3ee1)
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/98842641-93ca-423f-9d24-f069b8809922)
 
 You may retieve the IP address from the Azure Portal Console and selecting the Virtual Machine named `jenkinsvm267`
 
