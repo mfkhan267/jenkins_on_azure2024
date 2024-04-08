@@ -51,17 +51,9 @@ pipeline {
         }
         stage('deploy web app'){
             steps{
-                withCredentials([usernamePassword(credentialsId: 'asp', passwordVariable: 'password', usernameVariable: 'username')]) {
-                sh 'az login --service-principal -u ${username} -p ${password} --tenant ${AZURE_TENANT_ID}'
-                }
-                withCredentials([usernamePassword(credentialsId: 'acr', passwordVariable: 'password', usernameVariable: 'username')]) {
-                //sh 'az aks get-credentials --resource-group aks_RG267 --name aks_demo267 --overwrite-existing'
-                sh 'az acr show --name acr267 --resource-group jenkins267 -o table'
-                //sh 'az aks update --resource-group aks_RG267 --name aks_demo267 --attach-acr $ACR_NAME'
                 withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'aks', namespace: '', restrictKubeConfigAccess: true, serverUrl: '') {
                     sh 'kubectl get nodes'
                     sh 'kubectl set image deployment web-deploy web-deploy=${ACR_REGISTRY}/${APP_REPO_NAME}:${BUILD_NUMBER}'
-                }
                 }
                 sh 'echo Successfully updated the AKS Cluster web-deploy with the image version ${BUILD_NUMBER}'
             }
@@ -72,7 +64,6 @@ pipeline {
             echo 'Deleting all local images'
             sh 'docker image prune -af'
             sh 'docker logout'
-            sh 'az logout'
         }
     }
 }
