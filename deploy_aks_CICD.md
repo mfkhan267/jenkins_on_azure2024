@@ -84,9 +84,9 @@ Execute the below command to get the kubeconfig info, we will need to copy the e
 
 How to verify integration between ACR and AKS Cluster?
 
-az role assignment list --scope /subscriptions/<subscriptionID>/resourceGroups/<resourcegroupname>/providers/Microsoft.ContainerRegistry/registries/<acrname> -o table
+        az role assignment list --scope /subscriptions/<subscriptionID>/resourceGroups/<resourcegroupname>/providers/Microsoft.ContainerRegistry/registries/<acrname> -o table
 
-az role assignment list --scope /subscriptions/c8105223-fff8-4acf-9281-4171ea50d6ac/resourceGroups/jenkins267/providers/Microsoft.ContainerRegistry/registries/acr267 -o table
+        az role assignment list --scope /subscriptions/<insert your subscriptions ID here>/resourceGroups/jenkins267/providers/Microsoft.ContainerRegistry/registries/acr267 -o table
 
 Make sure that the output of the above command is not empty. If empty run the following command. For AKS to pull the Container images from the ACR, you will need to integrate your ACR with the AKS cluster using the az aks update command with the attach acr parameter and a valid value for acr-name or acr-resource-id. This should configure necessary permissions for AKS to access the ACR
 
