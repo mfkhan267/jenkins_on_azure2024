@@ -1,15 +1,17 @@
 # Automatically deploy your containerized app to Azure Kubernetes Service with Jenkins CI-CD Pipeline using GitHub Webhook
 # Part 5
 
-![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/23fb922a-3770-4845-8642-f7b5663cc2a4)
+![jenkins_aks](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/3807832b-4ca6-4f31-a347-d49e73e60563)
 
 This is final part of the Jenkins CI-CD Pipeline series where we will be deploying our containerized app to Azure Kubernetes Service. You havent gone through the previous tutorials of this series, I highly recommend you to review them before this one for better continous understanding.
 
+Create a Jenkins VM [Create a Jenkins Linux VM Part 1](./README.md)
+Install Docker Engine on the Azure VM that is running Jenkins [Install Docker on a Linux VM Part 2](./install_docker_on_linux.md)
+Run the Build manually to Deploy the new image build to your Azure Web App [Deploy Web App Part 3](./deploy_webapp.md)
+Run the Build with GitHub Webhook to Deploy the new image build to your Azure Web App [Deploy Web App Part 4](./deploy_webapp_CICD.md)
+
 Here are quick steps that we shall follow:
 
-> * Create a Jenkins VM [Create a Jenkins Linux VM Part 1](./README.md)
-> * Install Docker Engine on the Azure VM that is running Jenkins [Install Docker on a Linux VM Part 2](./install_docker_on_linux.md)
-> * Run the Build manually to Deploy the new image build to your Azure Web App [Deploy Web App Part 3](./deploy_webapp.md)
 > * Prepare your GitHub repository with the Application Code.
 > * Deploy a sample NodeJS Application to an AKS cluster.
 > * Create a basic Jenkins project.
