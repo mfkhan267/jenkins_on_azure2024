@@ -10,8 +10,8 @@ Here are quick steps that we shall follow:
 > * Create a Jenkins VM [Create a Jenkins Linux VM Part 1](./README.md)
 > * Install Docker Engine on the Azure VM that is running Jenkins [Install Docker on a Linux VM Part 2](./install_docker_on_linux.md)
 > * Run the Build manually to Deploy the new image build to your Azure Web App [Deploy Web App Part 3](./deploy_webapp.md)
-> * Prepare your GitHub repository with the App Code
-> * Deploy a sample Azure vote app to an AKS cluster.
+> * Prepare your GitHub repository with the Application Code.
+> * Deploy a sample NodeJS Application to an AKS cluster.
 > * Create a basic Jenkins project.
 > * Set up credentials for Jenkins to interact with ACR.
 > * Create a Jenkins build job and GitHub webhook for automated builds.
@@ -24,11 +24,17 @@ Here are quick steps that we shall follow:
 > * Azure CLI: Install Azure CLI (version 2.0.67 or higher) on the Jenkins server.
 > * Sample Application Code can be found at my Github Repository [HERE](https://github.com/mfkhan267/jenkins_on_azure2024.git)
 
-# Create your Fully Automated CI-CD Jenkins Pipeline
+# Create your Fully Automated CI/CD Jenkins Pipeline
+
+## GitHub Repository with Sample Application Code
+
+Create a new GitHub repository with your application code. Sample Application Code can be found at my Github Repository [HERE](https://github.com/mfkhan267/jenkins_on_azure2024.git)
 
 ## Docker Build, Push and Run
 
-Create a new GitHub repository with your application code. We will need to create a webhook for the GitHub repository that should be able to remotely trigger your builds jobs in Jenkins everytime application changes are commited and pushed to the above application code repository.
+## GitHub Webhook
+
+We will need to create a webhook for the GitHub repository that should be able to remotely trigger your builds jobs in Jenkins everytime application changes are commited and pushed to the above application code repository.
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/d9537195-7f37-4353-8466-8c6d47668976)
 
@@ -41,6 +47,19 @@ We will define the Jenkins Pipeline with the Pipeline script from SCM method as 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/c9068614-a851-46dc-98b9-7b4effa251b5)
 
 This should now allow the GitHub repository webhook to remote trigger the Build Jobs for the above pipeline in Jenkins, whenever you commit changes to your application code repository.
+
+# Deploy a sample NodeJS Application to an AKS cluster
+
+let us login to the Azure Portal >> Search >> Azure Kubernetes Servies >> Create Kubernetes Cluster with configurations as shown below
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/abdd88a1-149c-42ce-a71b-6cf83ba63bcb)
+
+Click Add node pool >> Give the pool a name (nplinux OR npwindows) with User Mode and Node Size as D2s_v3 >> Add >> Review and Create
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/de0031f5-671a-4e00-830f-cba2f4984f28)
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/f7cccc1d-3f60-47eb-bb84-988f3e7230e2)
+
 
 # Commit your application code changes and push the Application code repository on GitHub
 
