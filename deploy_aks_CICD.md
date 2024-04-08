@@ -57,19 +57,19 @@ Congratulations! You have successfully **Deployed** your containerized app to yo
 
 # Testing your Web App that should now be running your newly generated docker image with your App Code
 
-Below is Application v98 running as your Web App (your build version differ)
+Below is Application v13 running as a Deployment on the AKS CLuster (your build version may differ)
 
-![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/a53a7211-5c46-4acd-aa44-25c2da831fe4)
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/b5cc6c57-a124-4afb-9b70-f66746cefc66)
 
-![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/4a4f0954-c4a7-4d8f-9df8-13f7de5daf1d)
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/6debde58-3892-4198-9252-7c39e4dcd588)
 
 Commit and push your changes to your application code on GitHub and the GitHub webhook should trigger the Jenkins Pipeline Build automatically.
 The Jenkins Pipeline will automatically Build, Push and Deploy your containerized Application to the Azure Web App as part of your complete CI-CD Job.
 The Application should now be running a new Build as your Web App (your build version differ)
 
-![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/65df090e-9f8c-496c-be30-7e63880092de)
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/949a003f-c4b3-4977-9247-aeee6c719a15)
 
-![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/49ab3685-f058-4d71-88bc-39711c3ffdc3)
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/d40cb5a4-fc22-4734-8a0f-a827d1a2f070)
 
 ## Next steps
 
