@@ -11,8 +11,11 @@ Here are quick steps that we shall follow:
 > * Install Docker Engine on the Azure VM that is running Jenkins [Install Docker on a Linux VM Part 2](./install_docker_on_linux.md)
 > * Run the Build manually to Deploy the new image build to your Azure Web App [Deploy Web App Part 3](./deploy_webapp.md)
 > * Prepare your GitHub repository with the App Code
-> * Create the new Automated CI-CD Jenkins pipeline to automatically execute the Build and Deploy tasks
-> * Run the pipeline and verify the Azure Kubernetes Service Cluster is updated with the latest image build
+> * Deploy a sample Azure vote app to an AKS cluster.
+> * Create a basic Jenkins project.
+> * Set up credentials for Jenkins to interact with ACR.
+> * Create a Jenkins build job and GitHub webhook for automated builds.
+> * Test the CI/CD Jenkins pipeline to update the application in AKS based on GitHub code commits.
 
 # Prerequisites
 
