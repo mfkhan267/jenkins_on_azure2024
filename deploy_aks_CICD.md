@@ -1,16 +1,17 @@
 # Automatically deploy your containerized app to Azure Kubernetes Service with Jenkins CI-CD Pipeline using GitHub Webhook
 # Part 5
 
-![jenkins_aks](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/3807832b-4ca6-4f31-a347-d49e73e60563)
+![jenkins_aks (2)](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/d89eccdc-6973-46f9-85c8-9817fd84129b)
 
-This is final part of the Jenkins CI-CD Pipeline series where we will be deploying our containerized app to Azure Kubernetes Service. You havent gone through the previous tutorials of this series, I highly recommend you to review them before this one for better continous understanding.
+This is last part of the Jenkins CI/CD Pipeline series, where we will be deploying our containerized app to Azure Kubernetes Service. 
+In case you havent gone through the previous tutorials of this series, I highly recommend you review them before proceeding with this one for better continuity and understanding.
 
 Create a Jenkins VM [Create a Jenkins Linux VM Part 1](./README.md)
 Install Docker Engine on the Azure VM that is running Jenkins [Install Docker on a Linux VM Part 2](./install_docker_on_linux.md)
 Run the Build manually to Deploy the new image build to your Azure Web App [Deploy Web App Part 3](./deploy_webapp.md)
 Run the Build with GitHub Webhook to Deploy the new image build to your Azure Web App [Deploy Web App Part 4](./deploy_webapp_CICD.md)
 
-Here are quick steps that we shall follow:
+Here are quick steps that we shall follow here for this tutorial:
 
 > * Prepare your GitHub repository with the Application Code.
 > * Deploy a sample NodeJS Application to an AKS cluster.
@@ -30,13 +31,13 @@ Here are quick steps that we shall follow:
 
 ## GitHub Repository with Sample Application Code
 
-Create a new GitHub repository with your application code. Sample Application Code can be found at my Github Repository [HERE](https://github.com/mfkhan267/jenkins_on_azure2024.git)
+Create a new GitHub repository with your application code. Sample Application Code can be found at my Github Repository 
 
-## Docker Build, Push and Run
+[HERE](https://github.com/mfkhan267/jenkins_on_azure2024.git)
 
 ## GitHub Webhook
 
-We will need to create a webhook for the GitHub repository that should be able to remotely trigger your builds jobs in Jenkins everytime application changes are commited and pushed to the above application code repository.
+We will need to create a webhook for the GitHub repository that should be able to remotely trigger your builds jobs in Jenkins everytime the application changes are commited and pushed to the above application code repository.
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/d9537195-7f37-4353-8466-8c6d47668976)
 
@@ -48,7 +49,7 @@ We will define the Jenkins Pipeline with the Pipeline script from SCM method as 
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/c9068614-a851-46dc-98b9-7b4effa251b5)
 
-This should now allow the GitHub repository webhook to remote trigger the Build Jobs for the above pipeline in Jenkins, whenever you commit changes to your application code repository.
+This should now allow the GitHub repository webhook to remote trigger the Build Jobs for the above pipeline in Jenkins, whenever you commit changes to your application code hosted on GitHub.
 
 # Deploy a sample NodeJS Application to an AKS cluster
 
@@ -101,7 +102,6 @@ To deploy the application, you use a manifest file to create all the objects req
 In the Cloud Shell, let us donwload the sample repository files
 
     git clone https://github.com/mfkhan267/jenkins_on_azure2024.git
-
     cd deployments
 
     kubectl apply -f svc-lb.yml 
@@ -150,5 +150,3 @@ The Jenkins Pipeline will automatically Build, Push and Deploy your containerize
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/d40cb5a4-fc22-4734-8a0f-a827d1a2f070)
 
 ## Next steps
-
-[Create your Fully Automated CI-CD Jenkins Pipeline to Deploy your Application to an AKS Cluster Part 4](Coming Soon)
