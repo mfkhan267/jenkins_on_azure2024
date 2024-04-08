@@ -80,7 +80,7 @@ Execute the below command to get the kubeconfig info, we will need to copy the e
 
     cat ~/.kube/config
 
-![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/f0aa8915-872a-4e8d-870f-25d45cd42834)
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/406e503e-f206-4cb9-b160-f30c052a0a2a)
 
 How to verify integration between ACR and AKS Cluster?
 
@@ -158,6 +158,8 @@ The Application should now be running the new Build v14 as the recently modified
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/d40cb5a4-fc22-4734-8a0f-a827d1a2f070)
 
 That's all folks. Hope you enjoyed the Jenkins series with Docker, Azure Container Registry, Azure WebApp and Azure Kubernetes Service.
-Kindly share with the community. Until next time. See you soon.
+Kindly share with the community. 
+Until next time. 
+See you soon.
 
 ## Next steps
