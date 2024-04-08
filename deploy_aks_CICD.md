@@ -125,9 +125,10 @@ Once the EXTERNAL-IP address (public IP) is available for the load balancer serv
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/6debde58-3892-4198-9252-7c39e4dcd588)
 
-# Commit your application code changes and push the Application code repository on GitHub
+# Commit and Push your application code changes to the Application repository on GitHub
 
-The GitHub webhook should now trigger the Jenkins Pipeline Job and the Build Job should run automatically.
+Commit and push your changes to your application code on GitHub and the GitHub webhook should trigger the Jenkins Pipeline Build automatically.
+The Jenkins Pipeline will automatically Build, Push and Deploy your containerized Application to the Azure Kubernetes Service Cluster as part of your complete CI-CD Job. The GitHub webhook should now trigger the Jenkins Pipeline Job and the Build Job should run automatically.
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/bf87a69c-4036-4d28-a9dd-d80089dac678)
 
@@ -145,8 +146,7 @@ Below is Application v13 running as a Deployment on the AKS Cluster (your build 
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/6debde58-3892-4198-9252-7c39e4dcd588)
 
-Commit and push your changes to your application code on GitHub and the GitHub webhook should trigger the Jenkins Pipeline Build automatically.
-The Jenkins Pipeline will automatically Build, Push and Deploy your containerized Application to the Azure Kubernetes Service Cluster as part of your complete CI-CD Job. The Application should now be running the new Build v14 as the recently modified deployment on the AKS Cluster (your build version may differ)
+The Application should now be running the new Build v14 as the recently modified deployment on the AKS Cluster (your build version may differ)
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/949a003f-c4b3-4977-9247-aeee6c719a15)
 
