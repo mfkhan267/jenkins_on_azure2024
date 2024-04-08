@@ -76,7 +76,7 @@ This command downloads credentials and configures the Kubernetes CLI to use them
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/e9d28347-20b6-4a48-85ab-d67dde424596)
 
-Execute the below command to get the kubeconfig info, we will need to copy the entire content of the file to txt file that we will use to create a Jenkins Credentials with a secret file and name it "aks"
+Execute the below command to get the kubeconfig info, we will need to copy the entire content of the file to txt file that we will use to create a Jenkins Credentials with a secret file and name it "aks_secret.txt"
 
     cat ~/.kube/config
 
@@ -97,6 +97,12 @@ Make sure that the output of the above command is not empty. If empty run the fo
     az aks update --resource-group <myResourceGroup> --name <myAKSCluster> --attach-acr <acr-name>
 
     az aks update --resource-group aks_RG267 --name aks_demo267 --attach-acr acr267
+
+# Create a Secret File credential in Jenkins
+
+We will now create a Secret File credential in Jenkins with the secret text file "aks_secret.txt" that we had create earlier. This will allow Jenkins to connect to the AKS Cluster and update the Image Version for the deployment that is already up and running.
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/ec7453f3-2390-49ab-b887-f892fa0a3b66)
 
 # Deploy a sample NodeJS Application to the AKS cluster
 
