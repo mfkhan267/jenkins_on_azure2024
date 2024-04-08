@@ -43,17 +43,13 @@ This should now allow the GitHub repository webhook to remote trigger the Build 
 
 The GitHub webhook should now trigger the Jenkins Pipeline Job and the Build Job should run automatically.
 
-![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/e9ce5161-084c-43fc-9ecc-0610fb4c04a9)
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/bf87a69c-4036-4d28-a9dd-d80089dac678)
 
-![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/db0dd510-cb59-4a88-a270-fb6e5cac621d)
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/99b53eb0-8d19-43ef-a405-f1fa39f4c059)
 
 Wait until the Jenkins Pipeline build job is over. A graphic below the **Build History** heading indicates that the job is being executed or completed. Go to the job build and console output to see the results.
 
-![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/3654e0e8-dd51-4c37-b1c3-a0f85594ba83)
-
 Congratulations! You have successfully **Deployed** your containerized app to your Azure Web App. Your Azure Web App should now be running your newly generated docker image with your App Code
-
-![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/a959bee1-0c3f-404f-b3e5-766d311ac295)
 
 # Testing your Web App that should now be running your newly generated docker image with your App Code
 
