@@ -73,4 +73,4 @@ The Application should now be running a new Build as your Web App (your build ve
 
 ## Next steps
 
-[Create your Fully Automated CI-CD Jenkins Pipeline to Deploy your Application to an AKS Cluster Part 4](Coming Soon)
+[Automated CI/CD Jenkins Pipeline to Deploy your Application to an AKS Cluster Part 5](./deploy_aks_CICD.md)
