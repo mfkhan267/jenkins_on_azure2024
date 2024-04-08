@@ -1,9 +1,9 @@
-# Automatically deploy your containerized app to Azure App Service with Jenkins CI-CD Pipeline using GitHub Webhook
-# Part 4
+# Automatically deploy your containerized app to Azure Kubernetes Service with Jenkins CI-CD Pipeline using GitHub Webhook
+# Part 5
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/23fb922a-3770-4845-8642-f7b5663cc2a4)
 
-In the previous tutorial Part 3 of the series, you have already learned to dockerize a sample NodeJS application and deploy the same to Azure Web App, by manually running the Jenkins Pipeline Build. This is a follow up tutorial on how to configure Jenkins to automatically Build, Push and Deploy the containerized application as part of the CI-CD Jenkins pipeline job
+This is final part of the Jenkins CI-CD Pipeline series where we will be deploying our containerized app to Azure Kubernetes Service. You havent gone through the previous tutorials of this series, I highly recommend you to review them before this one for better continous understanding.
 
 Here are quick steps that we shall follow:
 
@@ -12,7 +12,7 @@ Here are quick steps that we shall follow:
 > * Run the Build manually to Deploy the new image build to your Azure Web App [Deploy Web App Part 3](./deploy_webapp.md)
 > * Prepare your GitHub repository with the App Code
 > * Create the new Automated CI-CD Jenkins pipeline to automatically execute the Build and Deploy tasks
-> * Run the pipeline and verify the Web App is updated with the latest image build
+> * Run the pipeline and verify the Azure Kubernetes Service Cluster is updated with the latest image build
 
 # Prerequisites
 
