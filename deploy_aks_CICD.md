@@ -118,6 +118,8 @@ Monitor progress using the kubectl get service command with the --watch argument
 
 Once the EXTERNAL-IP address (public IP) is available for the load balancer service, open a web browser to the external IP address of your service to see the your sample NodeJS app is up and running.
 
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/6debde58-3892-4198-9252-7c39e4dcd588)
+
 # Commit your application code changes and push the Application code repository on GitHub
 
 The GitHub webhook should now trigger the Jenkins Pipeline Job and the Build Job should run automatically.
