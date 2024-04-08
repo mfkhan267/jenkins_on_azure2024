@@ -7,8 +7,11 @@ This is last part of the Jenkins CI/CD Pipeline series, where we will be deployi
 In case you havent gone through the previous tutorials of this series, I highly recommend you review them before proceeding with this one for better continuity and understanding.
 
 Create a Jenkins VM [Create a Jenkins Linux VM Part 1](./README.md)
+
 Install Docker Engine on the Azure VM that is running Jenkins [Install Docker on a Linux VM Part 2](./install_docker_on_linux.md)
+
 Run the Build manually to Deploy the new image build to your Azure Web App [Deploy Web App Part 3](./deploy_webapp.md)
+
 Run the Build with GitHub Webhook to Deploy the new image build to your Azure Web App [Deploy Web App Part 4](./deploy_webapp_CICD.md)
 
 Here are quick steps that we shall follow here for this tutorial:
