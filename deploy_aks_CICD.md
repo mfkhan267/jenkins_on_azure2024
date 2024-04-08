@@ -112,7 +112,6 @@ In the Cloud Shell, let us donwload the sample repository files
 
     git clone https://github.com/mfkhan267/jenkins_on_azure2024.git
     cd deployments
-
     kubectl apply -f svc-lb.yml 
     kubectl apply -f deploy-complete.yml
 
@@ -157,5 +156,8 @@ The Application should now be running the new Build v14 as the recently modified
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/949a003f-c4b3-4977-9247-aeee6c719a15)
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/d40cb5a4-fc22-4734-8a0f-a827d1a2f070)
+
+That's all folks. Hope you enjoyed the Jenkins series with Docker, Azure Container Registry, Azure WebApp and Azure Kubernetes Service.
+Kindly share with the community. Until next time. See you soon.
 
 ## Next steps
