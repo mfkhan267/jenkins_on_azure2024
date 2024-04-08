@@ -1,4 +1,4 @@
-# Automatically deploy your containerized app to Azure Kubernetes Service with Jenkins CI-CD Pipeline using GitHub Webhook
+# Automatically deploy your containerized app to Azure Kubernetes Service with Jenkins CI/CD Pipeline using GitHub Webhook
 # Part 5
 
 ![jenkins_aks (2)](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/d89eccdc-6973-46f9-85c8-9817fd84129b)
@@ -128,7 +128,7 @@ Once the EXTERNAL-IP address (public IP) is available for the load balancer serv
 # Commit and Push your application code changes to the Application repository on GitHub
 
 Commit and push your changes to your application code on GitHub and the GitHub webhook should trigger the Jenkins Pipeline Build automatically.
-The Jenkins Pipeline will automatically Build, Push and Deploy your containerized Application to the Azure Kubernetes Service Cluster as part of your complete CI-CD Job. The GitHub webhook should now trigger the Jenkins Pipeline Job and the Build Job should run automatically.
+The Jenkins Pipeline will automatically Build, Push and Deploy your containerized Application to the Azure Kubernetes Service Cluster as part of your complete CI/CD Job. The GitHub webhook should now trigger the Jenkins Pipeline Job and the Build Job should run automatically.
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/bf87a69c-4036-4d28-a9dd-d80089dac678)
 
