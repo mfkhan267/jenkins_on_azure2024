@@ -29,13 +29,13 @@ Create a new GitHub repository with your application code. We will need to creat
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/d9537195-7f37-4353-8466-8c6d47668976)
 
-We will define the Jenkins Pipeline with the Peipeline script from SCM method as shown below
+We will define the Jenkins Pipeline with the Pipeline script from SCM method as shown below
 
-![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/8b8fcb66-97ba-4f2a-bfaa-da0a73c50b61)
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/b5daed29-e442-4a8d-afb8-3a6005083f8c)
 
-![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/24afb02b-d6c3-40f6-9a83-c0a3ef6d3ed2)
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/2d44e9d1-3a0d-4cf1-90c9-5f0e62aa265f)
 
-![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/817a3c0e-d8c7-43ef-8d99-eb3bbb917cd5)
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/c9068614-a851-46dc-98b9-7b4effa251b5)
 
 This should now allow the GitHub repository webhook to remote trigger the Build Jobs for the above pipeline in Jenkins, whenever you commit changes to your application code repository.
 
