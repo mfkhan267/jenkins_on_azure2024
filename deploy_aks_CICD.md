@@ -50,16 +50,73 @@ This should now allow the GitHub repository webhook to remote trigger the Build 
 
 # Deploy a sample NodeJS Application to an AKS cluster
 
-let us login to the Azure Portal >> Search >> Azure Kubernetes Servies >> Create Kubernetes Cluster with configurations as shown below
+Let us login to the Azure Portal >> Search >> Azure Kubernetes Servies >> Create Kubernetes Cluster with configurations as shown below
 
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/abdd88a1-149c-42ce-a71b-6cf83ba63bcb)
 
 Click Add node pool >> Give the pool a name (nplinux OR npwindows) with User Mode and Node Size as D2s_v3 >> Add >> Review and Create
 
-![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/de0031f5-671a-4e00-830f-cba2f4984f28)
-
 ![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/f7cccc1d-3f60-47eb-bb84-988f3e7230e2)
 
+# Connecting to the AKS Cluster
+
+Let us now launch the Azure Cloud Shell. The Cloud Shell has the kubectl pre-installed.
+
+    az aks get-credentials --resource-group aks_RG267 --name aks_demo267
+
+This command downloads credentials and configures the Kubernetes CLI to use them. To verify our connection with the AKS Cluster, let us run the following
+
+    kubectl get nodes
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/e9d28347-20b6-4a48-85ab-d67dde424596)
+
+Execute the below command to get the kubeconfig info, we will need to copy the entire content of the file to txt file that we will use to create a Jenkins Credentials with a secret file and name it "aks"
+
+    cat ~/.kube/config
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/f0aa8915-872a-4e8d-870f-25d45cd42834)
+
+How to verify integration between ACR and AKS Cluster?
+
+az role assignment list --scope /subscriptions/<subscriptionID>/resourceGroups/<resourcegroupname>/providers/Microsoft.ContainerRegistry/registries/<acrname> -o table
+
+az role assignment list --scope /subscriptions/c8105223-fff8-4acf-9281-4171ea50d6ac/resourceGroups/jenkins267/providers/Microsoft.ContainerRegistry/registries/acr267 -o table
+
+Make sure that the output of the above command is not empty. If empty run the following command. For AKS to pull the Container images from the ACR, you will need to integrate your ACR with the AKS cluster using the az aks update command with the attach acr parameter and a valid value for acr-name or acr-resource-id. This should configure necessary permissions for AKS to access the ACR
+
+    az aks update --resource-group <myResourceGroup> --name <myAKSCluster> --attach-acr <acr-resource-id>
+ 
+    OR
+
+    az aks update --resource-group <myResourceGroup> --name <myAKSCluster> --attach-acr <acr-name>
+
+    az aks update --resource-group aks_RG267 --name aks_demo267 --attach-acr acr267
+
+# Deploy a sample NodeJS Application to the AKS cluster
+
+To deploy the application, you use a manifest file to create all the objects required to run the AKS Store application. A Kubernetes manifest file defines a cluster's desired state, such as which container images to run. The manifest includes the following Kubernetes deployments and services.
+
+In the Cloud Shell, let us donwload the sample repository files
+
+    git clone https://github.com/mfkhan267/jenkins_on_azure2024.git
+
+    cd deployments
+
+    kubectl apply -f svc-lb.yml 
+    kubectl apply -f deploy-complete.yml
+
+# Test the initial Application
+
+Check for a public IP address for the web-deploy application in the load balancer service. 
+Monitor progress using the kubectl get service command with the --watch argument.
+
+    kubectl get service ps-lb
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/fb71848b-c583-4814-9dea-561ff5433cc9)
+
+![image](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/d0152de5-0817-4fac-b050-e4db85f0459e)
+
+Once the EXTERNAL-IP address (public IP) is available for the load balancer service, open a web browser to the external IP address of your service to see the your sample NodeJS app is up and running.
 
 # Commit your application code changes and push the Application code repository on GitHub
 
