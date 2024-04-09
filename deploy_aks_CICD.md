@@ -3,7 +3,7 @@
 
 ![jenkins_aks (2)](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/d89eccdc-6973-46f9-85c8-9817fd84129b)
 
-This is last part of the Jenkins CI/CD Pipeline series, where we will be deploying our containerized app to Azure Kubernetes Service. 
+This is the last part of the Jenkins CI/CD Pipeline series, where we will be deploying our containerized app to Azure Kubernetes Service. 
 In case you havent gone through the previous tutorials of this series, I highly recommend you review them before proceeding with this one for better continuity and understanding.
 
 Create a Jenkins VM [Create a Jenkins Linux VM Part 1](./README.md)
