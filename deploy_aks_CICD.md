@@ -1,4 +1,4 @@
-# Automatically deploy your containerized app to Azure Kubernetes Service with Jenkins CI/CD Pipeline using GitHub Webhook
+# Deploying your containerized app to Azure Kubernetes Service with Jenkins CI/CD Pipeline and GitHub Webhook
 # Part 5
 
 ![jenkins_aks (2)](https://github.com/mfkhan267/jenkins_on_azure2024/assets/77663612/d89eccdc-6973-46f9-85c8-9817fd84129b)
