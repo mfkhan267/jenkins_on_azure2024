@@ -3,32 +3,34 @@ By default, Jenkins comes with its own built-in Winstone web server listening on
 ## Prerequsites 
 - Jenkins installed 
 - An A record with <domain> pointing to your server’s public IP address.
+- Since I dont own a domain as of now, I will be using the DNS Name for my Azure VM instance
+- high5.eastus2.cloudapp.azure.com points to the Puclic IP of my Jenkins VM running on Azure
 ### Update Package Repository and Upgrade Packages
 ``` shell title="Run from shell prompt" linenums="1"
-sudo apt update
-sudo apt upgrade
+sudo apt update -y
+sudo apt upgrade -y
 ```
 ## Installing Certbot
 The first step to using Let’s Encrypt to obtain an SSL certificate is to install the Certbot software on your server.
 ``` shell title="Run from shell prompt" linenums="1"
-sudo apt install certbot python3-certbot-nginx
+sudo apt install certbot python3-certbot-nginx -y
 ```
 ### Confirming Nginx’s Configuration
 Certbot needs to be able to find the correct server block in your Nginx configuration for it to be able to automatically configure SSL. Specifically, it does this by looking for a server_name directive that matches the domain you request a certificate for.
 ``` shell title="Run from shell prompt (replace domain)" linenums="1"
-sudo vi /etc/nginx/sites-available/jenkins.dev.dman.cloud
+sudo vi /etc/nginx/sites-available/high5.eastus2.cloudapp.azure.com
 ```
 Find the existing server_name line. It should look like this:
 ``` shell title="Look for your domain"
 ...
-server_name jenkins.dev.dman.cloud;
+server_name high5.eastus2.cloudapp.azure.com;
 ...
 ```
 If it does, exit your editor and move on to the next step. If not review the installing Nginx Tutorial
 ### Obtaining an SSL Certificate
 Certbot provides a variety of ways to obtain SSL certificates through plugins. The Nginx plugin will take care of reconfiguring Nginx and reloading the config whenever necessary. To use this plugin, type the following:
 ``` shell title="Run from shell prompt (replace domain)" linenums="1"
-sudo certbot --nginx -d jenkins.dev.dman.cloud
+sudo certbot --nginx -d high5.eastus2.cloudapp.azure.com
 ```
 If that’s successful, certbot will ask how you’d like to configure your HTTPS settings.
 

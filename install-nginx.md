@@ -7,13 +7,13 @@ In this tutorial, you will configure Nginx as a reverse proxy to direct client r
 ### Update Package Repository and Upgrade Packages
 
 ``` shell title="Run from shell prompt" linenums="1"
-sudo apt update
-sudo apt upgrade
+sudo apt update -y
+sudo apt upgrade -y
 ```
 
 ## Installing Nginx
 ``` shell title="Run from shell prompt"
-sudo apt install nginx
+sudo apt install nginx -y
 ```
 ### Checking your Web Server
 We can check with the `systemd` init system to make sure the service is running by typing:
@@ -42,7 +42,7 @@ http://your_server_ip
 
 In order for Nginx to serve this content, it’s necessary to create a server block with the correct directives.
 ``` shell title="Run from shell prompt (replace your domain)" linenums="1"
-sudo vi /etc/nginx/sites-available/jenkins.dev.dman.cloud
+sudo vi /etc/nginx/sites-available/high5.eastus2.cloudapp.azure.com
 ```
 Paste in the following configuration block, which is similar to the default, but updated for our new directory and domain name:
 ``` shell title="Paste the below (replace your domain)" linenums="1"
@@ -52,7 +52,7 @@ upstream jenkins{
 
 server{
     listen      80;
-    server_name jenkins.dev.dman.cloud;
+    server_name high5.eastus2.cloudapp.azure.com;
 
     access_log  /var/log/nginx/jenkins.access.log;
     error_log   /var/log/nginx/jenkins.error.log;
@@ -75,7 +75,7 @@ server{
 ```
 Next, let’s enable the file by creating a link from it to the sites-enabled directory, which Nginx reads from during startup:
 ``` shell title="Run from shell prompt (replace your domain)" linenums="1"
-sudo ln -s /etc/nginx/sites-available/jenkins.dev.dman.cloud /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/high5.eastus2.cloudapp.azure.com /etc/nginx/sites-enabled/
 ```
 Next, test to make sure that there are no syntax errors in any of your Nginx files:
 ``` shell title="Run from shell prompt" linenums="1"
